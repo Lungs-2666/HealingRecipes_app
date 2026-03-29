@@ -1,10 +1,8 @@
     import './recipeList.css';
     import { remedies } from '@/data/data';
     
-    const RecipeList = () => {
-        function selectItem(){
-            
-        }
+    const RecipeList = ( props ) => {
+        let { handleSelect } = props;
 
         return (
             <form className='recipe_list'>
@@ -12,8 +10,9 @@
                     {remedies.map((item, index) => {
                         return (
                             <div
-                            key={item.id}
-                            className='list_item'
+                             key={item.id}
+                             className='list_item'
+                             onClick={() => handleSelect(item.id - 1)}
                             >
                                 {item.title}
                             </div>

@@ -9,7 +9,6 @@
     import { remedies } from "@/data/data";
 
     const RecipePage = () => {
-        const [remArr, setRemArr] = useState( remedies );
         const [selectedCard, setSelectedCard] = useState( 0 );
 
         return (
@@ -17,13 +16,10 @@
                 <SearchInp />
 
                 <div className={styles.main_content}>
-                    <RecipeList />
+                    <RecipeList handleSelect={setSelectedCard}/>
 
                     <div className={styles.recipe_card_box}>
-                        <RecipeCard 
-                            id={remArr[selectedCard].id}
-                            title={remArr[selectedCard]}
-                        />
+                        <RecipeCard {...remedies[selectedCard]} />
                     </div>
                 </div>
             </div>

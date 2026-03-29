@@ -1,3 +1,37 @@
     .recipe_card{
-        
+        width: 400px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        font-size: 1.3rem;
+        opacity: 0;
+        animation: FadeOut 1 1.5s ease forwards;
+    }
+    
+    h4{
+        font-size: 1.6rem;
+    }
+
+    .card_group_1, .card_group_2, .card_group_3{
+        width: 100%;
+        height: 33%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card_group_3{
+        gap: 40px;
+    }
+
+    /* Animations */
+
+    @keyframes FadeOut{
+        from {
+            opacity: 0;
+        } to {
+            opacity: 1;
+        }
     }

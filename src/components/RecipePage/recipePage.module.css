@@ -10,6 +10,9 @@
         border: 1px solid rgba(255, 255, 255, 0.459);
         animation: Opacity 1 2s ease forwards;
         opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 
