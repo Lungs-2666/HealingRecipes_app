@@ -1,13 +1,15 @@
+    'use client'
     import './recipeList.css';
-    import { remedies } from '@/data/data';
+    
+    import { useState } from 'react';
     
     const RecipeList = ( props ) => {
-        let { handleSelect } = props;
+        let { handleSelect, remedies } = props;
 
         return (
             <form className='recipe_list'>
                 <div className='list_scroll'>
-                    {remedies.map((item, index) => {
+                    {remedies.map((item) => {
                         return (
                             <div
                              key={item.id}

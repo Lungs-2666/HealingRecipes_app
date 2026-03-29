@@ -3,7 +3,7 @@ const nextConfig = {
   /* config options here */
 
   turbopack: {
-    root: 'C:\\Users\\Тимофей\\Desktop\\Eyecode\\Week_works\\WW_curesApp\\my-app'
+    root: 'C:\\Users\\Тимофей\\Desktop\\Eyecode\\Week_works\\WW_curesApp\\my-app\\'
   },
 };
 

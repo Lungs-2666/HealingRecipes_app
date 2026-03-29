@@ -10,13 +10,19 @@
 
     const RecipePage = () => {
         const [selectedCard, setSelectedCard] = useState( 0 );
+        const [ filteredRems, setFilteredRems ] = useState(remedies);
+
+        function search( searchVal ){
+            const filtered = remedies.filter((item => item.title.includes(searchVal)));
+            setFilteredRems( filtered );
+        }
 
         return (
             <div className={styles.recipe_page}>
-                <SearchInp />
+                <SearchInp handleSearch={search}/>
 
                 <div className={styles.main_content}>
-                    <RecipeList handleSelect={setSelectedCard}/>
+                    <RecipeList remedies={filteredRems} handleSelect={setSelectedCard}/>
 
                     <div className={styles.recipe_card_box}>
                         <RecipeCard {...remedies[selectedCard]} />
